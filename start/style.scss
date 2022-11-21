@@ -1,3 +1,4 @@
+$background-masthead: #B9CF9D;
 $background-header: #B9CF9D;
 $background-footer: #67893C;
 
@@ -20,12 +21,12 @@ main {
 
 header {
     height: 10vh;
-    background: #B9CF9D;
+    background: $background-header;
 }
 
 .masthead {
     height: 35vh;
-    background: $background-header;
+    background: $background-masthead;
 }
 
 footer {
