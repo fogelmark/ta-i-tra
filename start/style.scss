@@ -1,6 +1,17 @@
+$background-header: #B9CF9D;
+$background-footer: #67893C;
+
+@mixin padding($padding) {
+    padding: $padding;
+}
+
+@mixin margin($margin) {
+    margin: $margin;
+}
+
 * {
-    padding: 0;
-    margin: 0;
+    @include padding(0);
+    @include margin(0);
 }
 
 main {
@@ -14,12 +25,12 @@ header {
 
 .masthead {
     height: 35vh;
-    background: #D9D9D9;
+    background: $background-header;
 }
 
 footer {
     height: 10vh;
-    background: #67893C;
+    background: $background-footer;
     position: relative;
     height: 10vh;
     bottom: 0;
