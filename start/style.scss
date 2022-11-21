@@ -1,6 +1,11 @@
-$background-masthead: #B9CF9D;
+$background-masthead: #D9D9D9;
 $background-header: #B9CF9D;
 $background-footer: #67893C;
+$header-footer-vh: 10vh;
+$button-bg: #D99E47;
+$DMSerif: 'DM Serif Display', serif;
+$DMSans: 'DM Sans';
+$offwhite: #fbfbf2;
 
 @mixin padding($padding) {
     padding: $padding;
@@ -15,31 +20,103 @@ $background-footer: #67893C;
     @include margin(0);
 }
 
-main {
-    min-height: 100vh;
-}
-
 header {
-    height: 10vh;
+    height: $header-footer-vh;
     background: $background-header;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 }
 
-.masthead {
-    height: 35vh;
-    background: $background-masthead;
+main {
+    min-height: 90vh;
+    .masthead {
+        height: 35vh;
+        background: $background-masthead;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .buy-now {
+            background: $button-bg;
+            box-shadow: 0px 4px 4px 0px #00000040;
+            outline: none;
+            border: none;
+            height: 8vh;
+            width: 54.872vw;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: $offwhite;
+            font-family: $DMSans;
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60vh;
+        .article-top {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .slogan {
+                font-family: $DMSerif;
+                font-size: 22px;
+                margin-bottom: 0.5em;
+            }
+            .bread {
+                font-family: $DMSans;
+                font-size: 16px;
+                width: 60vw;
+                text-align: center;
+            }
+        }
+        .article-bot {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            width: 75vw;
+            .circles {
+                display: flex;
+                justify-content: space-around;
+                .circle {
+                    background: #D9D9D9;
+                    border-radius: 50%;
+                    width: 2em;
+                    height: 2em;
+                    padding: 1.5em;
+                }
+            }
+            .bread {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 1em;
+                font-family: $DMSans;
+            }
+        }
+    }
 }
+
 
 footer {
-    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: $header-footer-vh;
     background: $background-footer;
     position: relative;
     height: 10vh;
     bottom: 0;
-}
+    color: $offwhite;
+    .footer-mid {
+        align-self: center;
+    }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
 }
