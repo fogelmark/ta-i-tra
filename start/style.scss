@@ -330,6 +330,7 @@ main {
     @include body-text-bold();
     margin-top: 0.5em;
   }
+  cursor: pointer;
 }
 
 .cutlery {
@@ -437,11 +438,15 @@ main {
   span {
     font-weight: bold;
     text-decoration: underline;
+    cursor: pointer;
   }
   .contact-icons {
     @include flex(row, space-between, center);
     height: 4.5625em;
     width: 19em;
+    p {
+      cursor: pointer;
+    }
     .phone-contact {
       text-align: center;
       i {
@@ -459,6 +464,7 @@ main {
 
 i {
   font-size: 2em;
+  cursor: pointer;
 }
 
 .socials {

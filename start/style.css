@@ -282,6 +282,7 @@ main {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  cursor: pointer;
 }
 .product p {
   font-family: "DM Sans", sans-serif;
@@ -425,6 +426,7 @@ main {
 .contact span {
   font-weight: bold;
   text-decoration: underline;
+  cursor: pointer;
 }
 .contact .contact-icons {
   display: flex;
@@ -433,6 +435,9 @@ main {
   align-items: center;
   height: 4.5625em;
   width: 19em;
+}
+.contact .contact-icons p {
+  cursor: pointer;
 }
 .contact .contact-icons .phone-contact {
   text-align: center;
@@ -449,6 +454,7 @@ main {
 
 i {
   font-size: 2em;
+  cursor: pointer;
 }
 
 .socials {
