@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+   <script defer src="https://kit.fontawesome.com/201072de2b.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="produkter.css">
+   <title>Produkter</title>
+</head>
+<body>
+
+  <header>
+    <nav class="top-nav">
+        <div>
+          <img src="images/logo-horizontal.png" class="logo-horizontal" alt="company logo">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a class="nav-link" href="#">HEM</a></li>
+          <li><a class="nav-link" href="#">PRODUKTER</a></li>
+          <li><a class="nav-link" href="#">REFERENSER</a></li>
+          <li><a class="nav-link" href="#">OM OSS</a></li>
+          <li><a class="nav-link" href="#">KONTAKT</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+      <div class="cover">
+        <h1 class="heading">Våra produkter</h1>
+        <img class="cover-img" src="images/cutlery-primary-green-1000.jpg" alt="Bild på en samling träbestick">
+      </div>
+
+      <div class="item-nav" id="forks">
+        <ul>
+          <li><a href="#forks" class="bold active">Gafflar</a></li>
+          <li><a href="#knives" class="bold">Knivar</a></li>
+          <li><a href="#spoons" class="bold">Skedar</a></li>
+          <li><a href="#plates" class="bold">Tallrikar</a></li>
+        </ul>
+      </div>
+
+      <section class="product-group">
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Eau de Natural Collection</p>
+            <p class="small-body">Forks</p>
+          </div>
+          <img src="images/fork-orange-600.jpg" alt="Trägaffel" class="product-img">
+          <h2 class="heading">Trägaffel 25-pack</h2>
+          <p class="body-text text-center margin-top">Engångsgafflar gjorda av återvunnen svensk skog. Brännbara och komposterbara.</p>
+          <h3 class="body-text bold margin-top">250 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="fork1" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="fork1" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">25 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Flippin Funky Collection</p>
+            <p class="small-body">Forks</p>
+          </div>
+          <img src="images/fork-funky-600.jpg" alt="Trägaffel" class="product-img">
+          <h2 class="heading">Trägaffel 20-pack</h2>
+          <p class="body-text text-center margin-top">Färgglada, giftfria trägafflar av återvunna råvaror. Går att elda upp efter användning!</p>
+          <h3 class="body-text bold margin-top">330 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="fork2" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="fork2" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">20 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="item-nav" id="knives">
+        <ul>
+          <li><a href="#forks" class="bold">Gafflar</a></li>
+          <li><a href="#knives" class="bold active">Knivar</a></li>
+          <li><a href="#spoons" class="bold">Skedar</a></li>
+          <li><a href="#plates" class="bold">Tallrikar</a></li>
+        </ul>
+      </div>
+
+      <section class="product-group">
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Eau de Natural Collection</p>
+            <p class="small-body">Knives</p>
+          </div>
+          <img src="images/knife-orange-600.jpg" alt="Träkniv" class="product-img">
+          <h2 class="heading">Träkniv 25-pack</h2>
+          <p class="body-text text-center margin-top">Engångsgafflar gjorda av återvunnen svensk skog. Brännbara och komposterbara.</p>
+          <h3 class="body-text bold margin-top">250 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="knife1" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="knife1" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">25 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Flippin Funky Collection</p>
+            <p class="small-body">Knives</p>
+          </div>
+          <img src="images/knife-funky-600.jpg" alt="Träkniv" class="product-img">
+          <h2 class="heading">Träkniv 20-pack</h2>
+          <p class="body-text text-center margin-top">Färgglada, giftfria träknivar av återvunna råvaror. Går att elda upp efter användning!</p>
+          <h3 class="body-text bold margin-top">330 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="knife2" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="knife2" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">20 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="item-nav" id="spoons">
+        <ul>
+          <li><a href="#forks" class="bold">Gafflar</a></li>
+          <li><a href="#knives" class="bold">Knivar</a></li>
+          <li><a href="#spoons" class="bold active">Skedar</a></li>
+          <li><a href="#plates" class="bold">Tallrikar</a></li>
+        </ul>
+      </div>
+
+      <section class="product-group">
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Eau de Natural Collection</p>
+            <p class="small-body">Spoons</p>
+          </div>
+          <img src="images/spoon-orange-600.jpg" alt="Träsked" class="product-img">
+          <h2 class="heading">Träsked 25-pack</h2>
+          <p class="body-text text-center margin-top">Engångsskedar gjorda av återvunnen svensk skog. Brännbara och komposterbara.</p>
+          <h3 class="body-text bold margin-top">250 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="spoon1" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="spoon1" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">25 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Flippin Funky Collection</p>
+            <p class="small-body">Spoons</p>
+          </div>
+          <img src="images/spoon-funky-600.jpg" alt="Träsked" class="product-img">
+          <h2 class="heading">Träsked 20-pack</h2>
+          <p class="body-text text-center margin-top">Färgglada, giftfria träskedar av återvunna råvaror. Går att elda upp efter användning!</p>
+          <h3 class="body-text bold margin-top">330 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="spoon2" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="spoon2" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">20 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="item-nav" id="plates">
+        <ul>
+          <li><a href="#forks" class="bold">Gafflar</a></li>
+          <li><a href="#knives" class="bold">Knivar</a></li>
+          <li><a href="#spoons" class="bold">Skedar</a></li>
+          <li><a href="#plates" class="bold active">Tallrikar</a></li>
+        </ul>
+      </div>
+
+      <section class="product-group">
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Eau de Natural Collection</p>
+            <p class="small-body">Plates</p>
+          </div>
+          <img src="images/plate-orange-600.jpg" alt="Trätallrik" class="product-img">
+          <h2 class="heading">Trätallrik 20-pack</h2>
+          <p class="body-text text-center margin-top">Engångstallrikar gjorda av återvunnen svensk skog. Brännbara och komposterbara.</p>
+          <h3 class="body-text bold margin-top">250 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="plate1" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="plate1" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">20 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="space-between">
+            <p class="small-body">Flippin Funky Collection</p>
+            <p class="small-body">Plates</p>
+          </div>
+          <img src="images/plate-funky-600.jpg" alt="Trätallrik" class="product-img">
+          <h2 class="heading">Trätallrik 10-pack</h2>
+          <p class="body-text text-center margin-top">Färgglada, giftfria trätallrikar av återvunna råvaror. Går att elda upp efter användning!</p>
+          <h3 class="body-text bold margin-top">330 KR</h3>
+          <div class="product-buy">
+            <div class="quantity">
+              <label for="plate2" class="quantity-label body-text bold">Antal</label>
+              <input type="number" id="plate2" class="input quantity-input">
+            </div>
+            <div class="price">
+              <p class="body-text">10 st / 1 låda</p>
+              <button class="btn green">KÖP</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+
+    </main>
+    <footer>
+        
+                
+      <div class="footer-logo">
+          <img src="images/logo-icon.png" class="logo" alt="business logo">
+      </div>
+
+      <ul class="footer-nav">
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Produkter</a></li>
+          <li><a href="#">Referenser</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Kontakt</a></li>
+      </ul>
+      
+      <div class="insta-acc">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-tiktok"></i>
+      </div>
+
+      <div class="footer-copyright">
+          <p>© 2022 Ta i Trä</p>
+      </div>
+  </footer>
+
+
+<!-- <script src=""></script> -->
+</body>
+</html>
