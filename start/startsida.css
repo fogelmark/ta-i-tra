@@ -124,7 +124,7 @@
   color: #fff;
   font-family: "DM Sans", sans-serif;
 }
-@media (min-width: 770px) {
+@media (min-width: 901px) {
   .nav-link {
     color: black;
   }
@@ -191,7 +191,7 @@ footer .insta-acc {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 1rem;
   width: 5rem;
   gap: 1rem;
 }
