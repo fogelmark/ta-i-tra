@@ -1,19 +1,4 @@
-$primary-green: #67893c;
-$secondary-green: #b9cf9d;
-$btnhover-dark-green: #3d640c;
-$primary-orange: #d99e47;
-$btnhover-dark-orange: #955900;
-$header-vh: 10vh;
-$footer-vh: 13vh;
-$heading-color: rgb(0, 0, 0);
-$box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.2);
-$heading-font: "DM Mono", monospace;
-$body-font: "DM Sans", sans-serif;
-$heading-font-size: 1.6em;
-$body-font-size: 1.2em;
-$small-font-size: 1em;
-$body-font-lineheight: 1.4em;
-$border-radius: 0.3rem;
+
 
 @mixin flex($direction, $justify, $align) {
   display: flex;
@@ -23,53 +8,35 @@ $border-radius: 0.3rem;
 }
 
 @mixin heading-style {
-  font-family: $heading-font;
-  font-size: $heading-font-size;
-  color: $heading-color;
-  letter-spacing: 0.05em;
-  line-height: $body-font-size;
+  font-family: "DM Mono", monospace;
+  font-size: 1.6em;
+  line-height: 1.2em;
 }
 
 @mixin body-text {
-  font-family: $body-font;
-  font-size: $body-font-size;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
   line-height: 1.4em;
   font-weight: 400;
 }
 
 @mixin body-text-bold {
-  font-family: $body-font;
-  font-size: $body-font-size;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
   line-height: 1.4em;
   font-weight: 700;
 }
 
 @mixin small-font {
-  font-family: $body-font;
-  font-size: $small-font-size;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
   font-weight: 400;
 }
 
 @mixin small-font-bold {
-  font-family: $body-font;
-  font-size: $small-font-size;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
   font-weight: 700;
-}
-
-@mixin height($height) {
-  height: $height;
-}
-
-@mixin width($width) {
-  width: $width;
-}
-
-@mixin padding($padding) {
-  padding: $padding;
-}
-
-@mixin margin($margin) {
-  margin: $margin;
 }
 
 @mixin cutlery {
@@ -111,17 +78,98 @@ $border-radius: 0.3rem;
 }
 
 * {
-  @include padding(0);
-  @include margin(0);
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+
+// COLORS
+$primary-green: #67893C;
+$secondary-green: #B9CF9D;
+$btnhover-dark-green: #3D640C;
+$primary-orange: #D99E47; 
+$btnhover-dark-orange: #955900; 
+$input-border-grey: #c1c1c1;
+
+// FONTS
+$heading-font: 'DM Mono', monospace;
+$body-font: 'DM Sans', sans-serif;
+
+// FONT SIZES
+$heading-font-size: 1.6em;
+$body-font-size: 1.2em;
+$small-font-size: 1em;
+$icon-font-size: 2em;
+
+// LINE HEIGHTS
+$body-font-lineheight: 1.4em;
+
+// BORDER RADIUS
+$border-radius: .3rem;
+
+// BOX SHADOW
+$box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+
+// INPUT BORDER
+$input-border: .15rem solid $input-border-grey;
+
+$primary-green: #67893c;
+$secondary-green: #b9cf9d;
+$btnhover-dark-green: #3d640c;
+$primary-orange: #d99e47;
+$btnhover-dark-orange: #955900;
+$footer-vh: 10rem;
+$box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.2);
+$heading-font-size: 1.6em;
+$body-font-size: 1.2em;
+$small-font-size: 1em;
+$body-font-lineheight: 1.4em;
+$border-radius: 0.3rem;
+
+
+@mixin heading-styling {
+  font-family: $heading-font;
+  font-size: $heading-font-size;
+}
+
+@mixin body-text-styling {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-font-lineheight;
+}
+
+@mixin small-text-styling {
+  font-family: $body-font;
+  font-size: $small-font-size;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin for-desktop-nav {
+  @media (min-width: 770px) {
+    @content;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 
 .top-nav {
   @include flex(row, space-between, center);
   background: $secondary-green;
-  color: #fff;
-  height: $header-vh;
+  color: #fff;  
   padding: 1em;
+  height: 5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
   .logo-horizontal {
     width: 10em;
@@ -132,8 +180,9 @@ $border-radius: 0.3rem;
 }
 
 .menu {
-  @include small-font();
-  @include flex(row, flex-start, flex-start);
+  @include body-text-styling;
+  font-weight: 700;
+  @include flex(row, flex-start, center);
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -189,7 +238,7 @@ $border-radius: 0.3rem;
 }
 
 .nav-link {
-  @include body-text();
+  @include body-text-styling;
   outline: none;
   text-decoration: none;
   color: #fff;
@@ -197,6 +246,89 @@ $border-radius: 0.3rem;
 
   @include for-desktop-nav {
     color: black;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 5rem;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 0.5px solid #fff;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    @include flex(row, center, flex-start);
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: $primary-green;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+footer {
+  @include flex(column, space-around, center);
+  background: $primary-green;
+  height: 10rem;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+
+  .insta-acc {
+    @include flex(row, center, center);
+    font-size: 1em;
+    width: 5rem;
+    gap: 1rem;
+  }
+
+  .footer-nav {
+    @include small-text-styling;
+    @include flex(row, space-around, flex-start);
+    width: 22.4375em;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  .footer-logo {
+    @include flex(row, center, center);
+    .logo {
+      width: 3.5em;
+    }
+  }
+  .footer-copyright {
+    @include small-text-styling;
+    @include flex(row, space-around, flex-start);
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
   }
 }
 
@@ -205,7 +337,7 @@ main {
 }
 
 .masthead {
-  @include height(30vh);
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -233,7 +365,7 @@ main {
 .yolo2 {
   @include flex(column, space-evenly, center);
   margin-bottom: 1rem;
-  height: 12rem;
+  height: 13rem;
   h1,
   h2 {
     color: #fff;
@@ -248,21 +380,21 @@ main {
 }
 
 .button {
-  @include height(8vh);
-  @include width(13.375em);
+  padding: 1rem 5rem;
+  text-align: center;
   @include body-text-bold();
   background: $primary-orange;
   box-shadow: 0px 4px 4px 0px #00000040;
   outline: none;
   border: none;
   border-radius: $border-radius;
-  color: #fff;
+  color: black;
   cursor: pointer;
 
   @include for-desktop {
-    width: 30%;
     &:hover {
       background-color: $btnhover-dark-orange;
+      color: #fff;
     }
   }
 
@@ -271,14 +403,10 @@ main {
   }
 }
 
-// .container {
-//   min-height: 50vh;
-// }
-
 .article-slogan {
   @include flex(column, center, center);
   width: 100vw;
-  @include padding(3em);
+  padding: 3em;
   .heading-style {
     width: 23rem;
     margin-bottom: 0.5em;
@@ -319,13 +447,18 @@ main {
   height: 40vh;
 
   @include for-desktop {
-      width: 60%;
+    width: 60%;
   }
 }
 
 .product {
   @include flex(column, space-between, center);
   height: fit-content;
+  .gafflar,
+  .knivar,
+  .skedar {
+    object-position: left;
+  }
   p {
     @include body-text-bold();
     margin-top: 0.5em;
@@ -337,8 +470,8 @@ main {
   @include cutlery();
 
   @include for-desktop {
-      height: 9em;
-      width: 9em;
+    height: 9em;
+    width: 9em;
   }
 }
 
@@ -350,11 +483,11 @@ main {
     width: 40.375em;
   }
   .heading-style {
-    @include padding(2em);
+    padding: 2em;
     text-align: center;
 
     @include for-desktop {
-      @include padding(0);
+      padding: 0;
       margin-bottom: 0.5em;
     }
   }
@@ -371,20 +504,13 @@ main {
     height: 26em;
   }
   .button {
-    margin-bottom: 2rem;
-
-    @include for-desktop {
-      width: 13.375em;
-    }
-
-    @include for-tablet {
-      height: 10%;
-    }
+    margin-bottom: 1rem;
   }
-  p.readmore {
-    text-align: center;
-    margin-bottom: 1em;
-  }
+}
+
+p.readmore {
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .rec-card {
@@ -413,9 +539,9 @@ main {
     order: -1;
   }
   .heading-style {
-    @include padding(2em);
+    padding: 2em;
     @include for-desktop {
-      @include padding(0);
+      padding: 0;
       margin-bottom: 0.5em;
     }
   }
@@ -480,18 +606,18 @@ i {
       @include flex(row, space-between, center);
       width: 34%;
     }
-    .insta-acc, .tiktok-acc {
+    .insta-acc,
+    .tiktok-acc {
       text-align: center;
       i {
         margin-bottom: 0.5em;
-        margin-right: .7rem;
+        margin-right: 0.7rem;
       }
       @include for-desktop {
         width: 12em;
         @include flex(row, center, center);
         i {
           margin-top: 0.5em;
-
         }
       }
     }
@@ -501,86 +627,11 @@ i {
   }
 }
 
-footer {
-  @include flex(column, center, center);
-  background: $primary-green;
-  height: $footer-vh;
-  position: relative;
-  bottom: 0;
-  color: #fff;
-
-  @include for-desktop {
-    @include flex(column, space-around, center);
-    height: 9em;
-  }
-  .footer-top {
-    @include small-font();
-    @include flex(row, space-around, flex-start);
-    width: 22.4375em;
-  }
-  .footer-mid {
-    @include flex(row, center, center);
-    @include for-desktop {
-      order: -1;
-    }
-    .logo {
-      width: 3.5em;
-    }
-  }
-  .footer-bot {
-    @include body-text();
-    @include flex(row, space-around, flex-start);
-    font-size: 0.8em;
-    display: flex;
-    justify-content: space-around;
-    width: 50vw;
-  }
-}
-
-@media (min-width: 1025px) {  
+@media (min-width: 1025px) {
   .yolo {
     display: flex;
     justify-content: space-around;
   }
 }
 
-@media (max-width: 770px) {
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 10vh;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 0.5px solid #fff;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    @include flex(row, center, flex-start);
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: $primary-green;
-    opacity: 95%;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
-}
+
