@@ -383,12 +383,21 @@ main {
               padding-left: 3%;
             }
           margin-top: 10%;
+          
           }
         }
         // FORMULÄR DESKTOP ENDS HERE
         
         .media2{
+
+
           margin-top: 10%;
+          @media (min-width: 1440px){
+            margin-top: 1%;
+
+          }
+          // background: red;
+          
     }
 } 
 
