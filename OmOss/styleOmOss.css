@@ -1,0 +1,522 @@
+@charset "UTF-8";
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #B9CF9D;
+  color: #fff;
+  padding: 1em;
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+}
+.top-nav .logo-horizontal {
+  width: 10em;
+}
+.top-nav #menu-toggle {
+  display: none;
+}
+
+.menu {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #000;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.nav-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+}
+@media (min-width: 900px) {
+  .nav-link {
+    color: black;
+  }
+  .nav-link:hover {
+    color: #fff;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 5rem;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 0.5px solid #fff;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #67893C;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #67893C;
+  height: 10rem;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+}
+footer .insta-acc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  width: 5rem;
+  gap: 1rem;
+}
+footer .footer-nav {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 22.4375em;
+  list-style: none;
+}
+footer .footer-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .footer-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-logo .logo {
+  width: 3.5em;
+}
+footer .footer-copyright {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+}
+
+/* ------------------------------------------------------------------------------------ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #B9D09D;
+  height: 10vh;
+}
+
+footer {
+  height: 10vh;
+  background: #67893C;
+  position: relative;
+  height: 10rem;
+  bottom: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.HeadingText {
+  font-family: "DM Mono", monospace;
+}
+
+.bröd {
+  display: flex;
+  text-align: center;
+  width: 70vw;
+  align-self: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.titel1 { /* titel - om oss */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "DM Mono", monospace;
+  height: 8vh;
+}
+
+.article1wrap { /* grön artikel - historik  */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 15rem;
+  background-color: #B9D09D;
+}
+.article1wrap .article1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  min-height: 8rem;
+  font-family: "DM Sans", sans-serif;
+}
+
+.article2 { /* vit artikel - tillverkningsprocess */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "DM Mono", monospace;
+}
+.article2 .bröd2 {
+  display: flex;
+  text-align: center;
+  width: 80vw;
+  font-family: "DM Sans", sans-serif;
+  align-self: center;
+}
+
+.pictureArticle { /* två mindre bilder */
+  display: flex;
+  justify-content: space-evenly;
+  height: 22vh;
+}
+.pictureArticle .bildS {
+  width: 45vw;
+  height: 20vh;
+  border-radius: 5%;
+}
+
+.pictureArticleWide { /* Större bredare bild */
+  display: flex;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-items: center;
+}
+.pictureArticleWide .bildM {
+  width: 94vw;
+  height: 20vh;
+  border-radius: 5%;
+}
+
+.workForceTitel { /* titel - medarbetare */
+  height: 8vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: x-large;
+  font-family: "DM Mono", monospace;
+}
+
+.workbody { /* medarbetarkortkropp */
+  display: flex;
+  flex-direction: column;
+}
+.workbody .workForceMain { /* medarbetarkortplacering */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2vh;
+}
+.workbody .card { /* medarbetarkort */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 5vh;
+  width: 70vw;
+}
+.workbody .cardImgStyle { /* medarbetarkort - bild */
+  background-color: white;
+  margin: 1vh;
+  border-radius: 50%;
+  height: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.workbody .namn { /* medarbetarkort - namn */
+  font-size: x-large;
+  font-family: "DM Mono", monospace;
+}
+.workbody .titelorganizer { /* medarbetarkort - kropp */
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  height: 30vh;
+  flex-direction: column;
+}
+.workbody button { /* medarbetarkort - knapp */
+  border: none;
+  border-radius: 5%;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  background: #D99E47;
+}
+.workbody button button:hover, .workbody button a:hover {
+  background: #C27A0F;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: white;
+  }
+  .bröd {
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+    font-size: large;
+    justify-content: center;
+  }
+  .titel1 { /* titel - om oss */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: "DM Mono", monospace;
+    height: 12vh;
+  }
+  .article1wrap { /* grön artikel - historik  */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 15rem;
+    background-color: #B9D09D;
+  }
+  .article1wrap .article1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 12rem;
+    font-family: "DM Sans", sans-serif;
+  }
+  .article2 { /* vit artikel - tillverkningsprocess */
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 15vh;
+    font-family: "DM Mono", monospace;
+  }
+  .article2 .bröd2 {
+    display: flex;
+    text-align: center;
+    width: 80vw;
+    font-family: "DM Sans", sans-serif;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .article2 .bröd2 .HeadingText {
+    text-align: center;
+  }
+  .pictureArticleWide { /* Större bredare bild */
+    display: flex;
+    justify-content: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .pictureArticleWide .bildM {
+    width: 94vw;
+    height: 20vh;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .wrapPictureWeb {
+    display: flex;
+    justify-content: space-evenly;
+    height: 45vh;
+  }
+  .wrapPictureWeb .pictureArticle { /* två mindre bilder */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 44vh;
+    width: 50vw;
+  }
+  .wrapPictureWeb .bildM {
+    width: 40vw;
+    height: 40vh;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .wrapPictureWeb .bildS {
+    width: 20vw;
+    height: 40vh;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .workForceTitel { /* titel - medarbetare */
+    height: 8vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: x-large;
+    font-family: "DM Mono", monospace;
+  }
+  .workbody { /* medarbetarkortkropp */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .workbody .workForceMain { /* medarbetarkortplacering */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1em;
+    row-gap: 5em;
+  }
+  .workbody .card { /* medarbetarkort */
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    width: 250px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    height: 70vh;
+    border: 5px;
+  }
+  .workbody .cardImgStyle { /* medarbetarkort - bild */
+    background-color: white;
+    margin: 2vh;
+    border-radius: 50%;
+    width: 60%;
+    height: 40%;
+  }
+  .workbody .namn { /* medarbetarkort - namn */
+    font-size: x-large;
+    font-family: "DM Mono", monospace;
+  }
+  .workbody .titelorganizer { /* medarbetarkort - kropp */
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    height: 30vh;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=styleOmOss.css.map */

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>recensioner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <div>
+              <img src="/ta-i-tra/images/logo-horizontal.png" class="logo-horizontal" alt="company logo">
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+              <li><a class="nav-link" href="#">HEM</a></li>
+              <li><a class="nav-link" href="#">PRODUKTER</a></li>
+              <li><a class="nav-link" href="#">REFERENSER</a></li>
+              <li><a class="nav-link" href="#">OM OSS</a></li>
+              <li><a class="nav-link" href="#">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="main">
+    <article class="article1">
+        <h2 class="HeadingText">Referenser</h2>
+        <p class="bröd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, dolores?</p>
+        <p class="bröd">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur in maiores praesentium  <b><a href="#formulär">Till formuläret</a></b></p>
+    </article>
+
+    <article class="article2">
+        <div class="divinstar"> 
+            <label>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i id="badstar" class="fa-regular fa-star"></i>
+            </label>
+        </div>
+            <h3 class="HeadingText">4 av 5 stjärnor</h3>
+                <p class="bröd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae.</p>
+                <h3 class="HeadingText">Surdegsbagaren89</h3>
+    </article>
+
+    <article class="article2">
+        <div class="divinstar"> 
+            <label>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </label>
+        </div>
+            <h3 class="HeadingText">4 av 5 stjärnor</h3>
+                <p class="bröd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae.</p>
+                <h3 class="HeadingText">Djurv4nn3n</h3>
+    </article>
+
+    <article class="article2">
+        <div class="divinstar"> 
+            <label>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i id="badstar2" class="fa-regular fa-star"></i>
+                <i id="badstar3" class="fa-regular fa-star"></i>
+            </label>
+        </div>
+            <h3 class="HeadingText">3 av 5 stjärnor</h3>
+                <p class="bröd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae.</p>
+                <h3 class="HeadingText">Jägaren</h3>
+    </article>
+
+    <article class="article2">
+        <div class="divinstar"> 
+            <label>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </label>
+        </div>
+            <h3 class="HeadingText">4 av 5 stjärnor</h3>
+                <p class="bröd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae.</p>
+                <h3 class="HeadingText">BodilGunnarsson75</h3>
+    </article>
+
+    <form id="formulär" class="formulär1">
+        <article>
+            <h3 class="formulärTitel">Vad tycker du?</h3>
+            <p class="bröd">Skicka in din egna recension här!</p>
+        </article>
+
+        <article class="betyg"><h4>*betyg</h4></article>
+            <div class="rating">
+                <input type="radio"/><label class = "full" title="Awesome - 5 stars"></label>
+                <input type="radio"/><label class = "full" title="Pretty good - 4 stars"></label>
+                <input type="radio"/><label class = "full" title="Meh - 3 stars"></label>
+                <input type="radio"/><label class = "full" title="Kinda bad - 2 stars"></label>
+                <input type="radio"/><label class = "full" title="Sucks big time - 1 star"></label>
+            </div>
+                <div class="formulärInput">
+                    <h3 class="HeadingTextForm">Namn</h3>
+                        <input class="namnInput" type="text" placeholder="Skriv ditt namn">
+                </div>
+                <div class="formulärInput">
+                    <h3 class="HeadingTextForm">Text</h3>
+                        <textarea class="textInput" placeholder="Ifylld text blir såhär" cols="10" rows="4"></textarea>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="checkbox">
+                        <p class="bröd">Robot? No!</p>      
+                </div>     
+                    <input class="button" type="button" value="Submit">
+</form>
+
+</main>
+
+<footer>
+        
+                
+    <div class="footer-logo">
+        <img src="/ta-i-tra/images/logo-icon.png" class="logo" alt="business logo">
+    </div>
+
+    <ul class="footer-nav">
+        <li><a href="#">Hem</a></li>
+        <li><a href="#">Produkter</a></li>
+        <li><a href="#">Referenser</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Kontakt</a></li>
+    </ul>
+    
+    <div class="insta-acc">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+    </div>
+
+    <div class="footer-copyright">
+        <p>© 2022 Ta i Trä</p>
+    </div>
+</footer>
+
+</body>
+</html>
