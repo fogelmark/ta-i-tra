@@ -67,6 +67,9 @@
   margin: 0 1rem;
   overflow: hidden;
 }
+.menu > li .nav-active {
+  text-decoration: underline;
+}
 
 .menu-button-container {
   display: flex;
@@ -77,18 +80,31 @@
   height: 100%;
   width: 30px;
   cursor: pointer;
+  position: absolute;
 }
 
 .menu-button,
 .menu-button::before,
 .menu-button::after {
-  display: block;
+  display: flex;
   background-color: #000;
   position: absolute;
+  right: 0;
   height: 4px;
   width: 30px;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
+}
+@media (min-width: 1025px) {
+  .menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: none;
+  }
+}
+
+.menu-button {
+  margin-right: 1rem;
 }
 
 .menu-button::before {
@@ -124,7 +140,7 @@
   color: #fff;
   font-family: "DM Sans", sans-serif;
 }
-@media (min-width: 770px) {
+@media (min-width: 901px) {
   .nav-link {
     color: black;
   }
@@ -191,9 +207,14 @@ footer .insta-acc {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 1rem;
   width: 5rem;
   gap: 1rem;
+}
+footer .insta-acc a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
 }
 footer .footer-nav {
   font-family: "DM Sans", sans-serif;
@@ -286,12 +307,14 @@ main {
 }
 
 .button {
-  padding: 1rem 5rem;
-  text-align: center;
   font-family: "DM Sans", sans-serif;
   font-size: 1.2em;
   line-height: 1.4em;
   font-weight: 700;
+  list-style: none;
+  text-decoration: none;
+  padding: 1rem 5rem;
+  text-align: center;
   background: #d99e47;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   outline: none;
@@ -306,12 +329,30 @@ main {
     color: #fff;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .button {
-    height: 35%;
-  }
+
+.fa-arrow-up {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  outline: none;
+  cursor: pointer;
 }
 
+@media (min-width: 1025px) {
+  #myBtn {
+    display: none;
+    visibility: visible;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+  }
+}
 .article-slogan {
   display: flex;
   flex-direction: column;
@@ -322,6 +363,7 @@ main {
 }
 .article-slogan .heading-style {
   width: 23rem;
+  text-align: center;
   margin-bottom: 0.5em;
 }
 .article-slogan .body-regular {
@@ -371,6 +413,11 @@ main {
   flex-flow: row wrap;
   width: 80vw;
   height: 40vh;
+}
+.product-container a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 @media (min-width: 1025px) {
   .product-container {
@@ -587,6 +634,12 @@ i {
 .socials .socials-icons .insta-acc,
 .socials .socials-icons .tiktok-acc {
   text-align: center;
+}
+.socials .socials-icons .insta-acc a,
+.socials .socials-icons .tiktok-acc a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 .socials .socials-icons .insta-acc i,
 .socials .socials-icons .tiktok-acc i {

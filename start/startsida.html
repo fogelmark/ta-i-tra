@@ -20,12 +20,13 @@
               <img src="/start/images/logo-horizontal.png" class="logo-horizontal" alt="company logo">
             </div>
             <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
+            
+            <div class='menu-button'>
+                <label class='menu-button-container' for="menu-toggle"></label>
+            </div>
             <ul class="menu">
-              <li><a class="nav-link" href="#">HEM</a></li>
-              <li><a class="nav-link" href="#">PRODUKTER</a></li>
+              <li><a class="nav-link nav-active" href="http://127.0.0.1:5500/start/startsida.html">HEM</a></li>
+              <li><a class="nav-link" href="http://127.0.0.1:5500/produkter/produkter.html">PRODUKTER</a></li>
               <li><a class="nav-link" href="#">REFERENSER</a></li>
               <li><a class="nav-link" href="#">OM OSS</a></li>
               <li><a class="nav-link" href="#">KONTAKT</a></li>
@@ -37,9 +38,10 @@
             <div class="yolo2">
                 <h1 class="heading-style">Shoppa träbestick</h1>
                 <h2 class="heading-style">Av skogen, för skogen.</h2>
-                <button class="button">PRODUKTER</button>
+                <a href="http://127.0.0.1:5500/produkter/produkter.html" class="button">PRODUKTER</a>
             </div>
         </div>
+        <i class="fa-solid fa-arrow-up" onclick="topFunction()" id="myBtn" title="Go to Top"></i>
 
         <article class="article-slogan">
             <h2 class="heading-style">Av skogen, för skogen.</h2>
@@ -49,25 +51,33 @@
             <h2 class="heading-style">Produktkategorier</h2>
             <div class="product-container">
 
-                <div class="product">
-                    <img class="cutlery gafflar" src="/start/images/fork-orange-600.jpg" alt="produktbild på en gaffel">
-                    <p class="body-bold">Gafflar</p>
-                </div>
+                <a href="http://127.0.0.1:5500/produkter/produkter.html#forks">
+                    <div class="product">
+                        <img class="cutlery gafflar" src="/start/images/fork-orange-600.jpg" alt="produktbild på en gaffel">
+                        <p class="body-bold">Gafflar</p>
+                    </div>
+                </a>
 
-                <div class="product">
-                    <img class="cutlery knivar" src="/start/images/knife-orange-600.jpg" alt="produktbild på en kniv">
-                    <p class="body-bold">Knivar</p>
-                </div>
+                <a href="http://127.0.0.1:5500/produkter/produkter.html#knives">
+                    <div class="product">
+                        <img class="cutlery knivar" src="/start/images/knife-orange-600.jpg" alt="produktbild på en kniv">
+                        <p class="body-bold">Knivar</p>
+                    </div>
+                </a>
 
-                <div class="product">
-                    <img class="cutlery skedar" src="/start/images/spoon-orange-600.jpg" alt="produktbild på en sked">
-                    <p class="body-bold">Skedar</p>
-                </div>
+                <a href="http://127.0.0.1:5500/produkter/produkter.html#spoons">
+                    <div class="product">
+                        <img class="cutlery skedar" src="/start/images/spoon-orange-600.jpg" alt="produktbild på en sked">
+                        <p class="body-bold">Skedar</p>
+                    </div>
+                </a>
 
-                <div class="product">
-                    <img class="cutlery tallrikar" src="/start/images/plate-orange-600.jpg" alt="produktbild på en tallrik">
-                    <p class="body-bold">Tallrikar</p>
-                </div>
+                <a href="http://127.0.0.1:5500/produkter/produkter.html#plates">
+                    <div class="product">
+                        <img class="cutlery tallrikar" src="/start/images/plate-orange-600.jpg" alt="produktbild på en tallrik">
+                        <p class="body-bold">Tallrikar</p>
+                    </div>
+                </a>
 
             </div>
         </article>
@@ -128,11 +138,11 @@
             <h2 class="heading-style">Hitta oss på sociala medier!</h2>
             <div class="socials-icons">
                 <div class="insta-acc">
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     <p class="body-regular">TheRealTiT</p>
                 </div>
                 <div class="tiktok-acc">
-                    <i class="fa-brands fa-tiktok"></i>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                     <p class="body-regular">taiträ_official</p>
                 </div>
             </div>
@@ -147,16 +157,16 @@
         </div>
 
         <ul class="footer-nav">
-            <li><a href="#">Hem</a></li>
-            <li><a href="#">Produkter</a></li>
+            <li><a href="http://127.0.0.1:5500/start/startsida.html">Hem</a></li>
+            <li><a href="http://127.0.0.1:5500/produkter/produkter.html">Produkter</a></li>
             <li><a href="#">Referenser</a></li>
             <li><a href="#">Om oss</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
         
         <div class="insta-acc">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-tiktok"></i>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
         </div>
 
         <div class="footer-copyright">
