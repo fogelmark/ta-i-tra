@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/098ae254cd.js" crossorigin="anonymous"></script>
+   <title>Ta i Trä</title>
+</head>
+<body>
+
+  <header>
+    <nav class="top-nav">
+        <div>
+          <img src="/start/logo-horizontal.png" class="logo-horizontal" alt="company logo">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a class="nav-link" href="http://127.0.0.1:5501/ta-i-tra/start/startsida.html">HEM</a></li>
+          <li><a class="nav-link" href="#">PRODUKTER</a></li>
+          <li><a class="nav-link" href="#">REFERENSER</a></li>
+          <li><a class="nav-link" href="#">OM OSS</a></li>
+          <li><a class="nav-link" href="http://127.0.0.1:5501/ta-i-tra/contact/contact.html">KONTAKT</a></li>
+        </ul>
+    </nav>
+</header>
+ <!--    min kod    -->
+    <main>
+      <div class="main-container">
+        <div class="top-content">
+          <h1 class="bold kontakta">Kontakta oss</h1>
+          <div class="media">
+            <div class="phone">
+              <i class="fa-solid fa-phone fa-xl" id="phone"></i>
+              <a href="tel:+46-0101231223" class="contact-info"><p>010-123-1223</p></a>
+            </div>
+            
+            <div class="mail">
+              <i class="fa-solid fa-envelope fa-xl" id="mail"></i>
+              <p>info@taitra.se</p>
+            </div>
+            
+            <div class="location">
+              <i class="fa-solid fa-location-dot fa-xl" id="location"></i>
+              <p>Hittepåvägen 32, Stockholm</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mid-content">
+          <div class="map">
+            <iframe class="street-info" id="street-view" src="https://www.google.com/maps/embed?pb=!4v1669123066747!6m8!1m7!1szO9aSU4errJ_HAalQQ-Zcw!2m2!1d59.30870701152276!2d18.0263553373835!3f103.468765!4f0!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        
+        <div class="bot-content">
+          <form id="form">
+            <div class="form-heading">
+              <p>Hur kan vi hjälpa dig?</p>
+            </div>
+            
+            <div class="buy">
+              <input type="radio" name="buy" id="buy">
+              <label for="buy">Köp av produkt</label>
+            </div>
+            
+            <div class="ask">
+              <input type="radio" name="ask" id="ask">
+              <label for="ask">Frågor om företaget</label>
+            </div>
+            
+            <div class="thoughts">
+              <input type="radio" name="thoughts" id="thoughts">
+              <label for="thoughts">Synpunkter på webbplatsen</label>
+           </div>
+           
+           <div class="media2">
+
+            <div class="left-input">
+              <div>
+                <label for="user-name" id="user-name-label">Namn*</label>
+              </div>
+              <div class="user-name">
+                <input type="text" id="user-name">
+              </div>
+            </div>
+            
+            <div class="right-input">
+              <div>
+                <label for="user-email" id="user-email-label">Email*</label>
+              </div>
+              <div class="user-email">
+                <input type="text" id="user-email">
+              </div>
+            </div>
+          </div>
+          
+          <div>
+          <div>
+            <label for="free-text-input" id="text-area-label">Meddelande</label>
+          </div>
+          <div>
+            <textarea placeholder="" cols="1" rows="1" id="free-text-input" class="free-text-input" ></textarea>
+          </div>
+        </div>
+
+          <div class="media3">
+            <div class="terms">
+              <input type="checkbox" id="terms">  
+              <label for="terms">Robot? Nej? </label>
+            </div>
+            <div class="btn">
+              <button>SKICKA</button>
+            </div>
+          </div>
+        </form>
+         
+        <div class="errorMessage">
+
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+  <div class="footer-logo">
+    <img src="/start/images/logo-icon.png" class="logo" alt="business logo">
+</div>
+
+<ul class="footer-nav">
+    <li><a href="#">Hem</a></li>
+    <li><a href="#">Produkter</a></li>
+    <li><a href="#">Referenser</a></li>
+    <li><a href="#">Om oss</a></li>
+    <li><a href="#">Kontakt</a></li>
+</ul>
+
+<div class="insta-acc">
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-tiktok"></i>
+</div>
+
+<div class="footer-copyright">
+    <p>© 2022 Ta i Trä</p>
+</div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
