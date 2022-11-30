@@ -1,0 +1,590 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+// COLORS
+$primary-green: #67893C;
+$secondary-green: #B9CF9D;
+$btnhover-dark-green: #3D640C;
+$primary-orange: #D99E47; 
+$btnhover-dark-orange: #955900; 
+$input-border-grey: #c1c1c1;
+
+// FONTS
+$heading-font: 'DM Mono', monospace;
+$body-font: 'DM Sans', sans-serif;
+
+// FONT SIZES
+$heading-font-size: 1.6em;
+$body-font-size: 1.2em;
+$small-font-size: 1em;
+$icon-font-size: 2em;
+
+// LINE HEIGHTS
+$body-font-lineheight: 1.4em;
+
+// BORDER RADIUS
+$border-radius: .3rem;
+
+// BOX SHADOW
+$box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+
+// INPUT BORDER
+$input-border: .15rem solid $input-border-grey;
+
+
+@mixin heading-styling {
+  font-family: $heading-font;
+  font-size: $heading-font-size;
+}
+
+@mixin body-text-styling {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-font-lineheight;
+}
+
+@mixin small-text-styling {
+  font-family: $body-font;
+  font-size: $small-font-size;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin for-tablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+  @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-nav {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+.top-nav {
+  @include flex(row, space-between, center);
+  background: $secondary-green;
+  color: #fff;  
+  padding: 1em;
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  .logo-horizontal {
+    width: 10em;
+  }
+  #menu-toggle {
+    display: none;
+  }
+}
+
+.menu {
+  @include body-text-styling;
+  font-weight: 700;
+  @include flex(row, flex-start, center);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  @include flex(column, center, center);
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #000;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.nav-link {
+  @include body-text-styling;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  font-family: $body-font;
+
+  @include for-desktop-nav {
+    color: black;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 5rem;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 0.5px solid #fff;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    @include flex(row, center, flex-start);
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: $primary-green;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+footer {
+  @include flex(column, space-around, center);
+  background: $primary-green;
+  height: 10rem;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+
+  .insta-acc {
+    @include flex(row, center, center);
+    font-size: 1em;
+    width: 5rem;
+    gap: 1rem;
+  }
+
+  .footer-nav {
+    @include small-text-styling;
+    @include flex(row, space-around, flex-start);
+    width: 22.4375em;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  .footer-logo {
+    @include flex(row, center, center);
+    .logo {
+      width: 3.5em;
+    }
+  }
+  .footer-copyright {
+    @include small-text-styling;
+    @include flex(row, space-around, flex-start);
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+  }
+}
+
+
+
+/* ------------------------------------------------------------------------------------ */
+
+$background-footer: #67893C;
+$background-header: #B9D09D;
+$header-vh: 10vh;
+$footer-vh: 13vh;
+$background-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+$button-hover: #C27A0F;
+$button: #D99E47;
+$greenbutton: #67893C;
+$greenbutton-hover: #3D640C;
+$heading-font: 'DM Mono', monospace;
+$body-font: 'DM Sans', sans-serif;
+
+@mixin margin($margin) {
+    margin: $margin;
+}
+@mixin padding($padding) {
+    padding: $padding;
+}
+* {
+    @include padding(0);
+    @include margin(0);
+}
+
+main {
+  min-height: 100vh;
+}
+.HeadingText {
+  font-family: $heading-font;
+}
+.headerstyle{
+  background: $background-header;
+  height: $header-vh;
+}
+.footerstyle {
+  background: $background-footer;
+  height: $footer-vh;
+  position: relative;
+  bottom: 0;
+}
+body {
+    background: white;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 5vh;
+}
+
+.article1{ /* Vit artikel - recensioner text */ 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 8rem;   
+  margin-top: 5vh; 
+
+  .bröd{ /* vit artikel - placering brödtext */
+    text-align: center;
+    width: 80vw;
+    font-family: $body-font;
+  }  
+}
+
+.article2 { /* grön artikel - recensioner text */
+  background-color:$background-header ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 26vh;
+
+  .bröd{ /* grön artikel - placering brödtext */
+    text-align: center;
+    width: 80vw;
+    font-family: $body-font;
+  }   
+
+  .divinstar { /* grön artikel - stjärnor */
+    font-family: FontAwesome;
+    font-size: xx-large;
+    display: flex;
+    display: inline;
+    color: $button;
+  }
+  .fa-regular {
+    font-style: normal;
+  }
+
+  #badstar { /* grön artikel - id dåliga stjärnor */
+    color: lightgray;
+  }
+  #badstar2 { /* grön artikel - id dåliga stjärnor */
+    color: lightgray;
+  }
+  #badstar3 { /* grön artikel - id dåliga stjärnor */
+    color: lightgray;
+  }
+
+}
+
+.formulär1 { /* formulär */
+  box-shadow: $background-shadow;
+  display: flex;
+  height: 50vh; /* Kontrollera höjden senare */ 
+  width: 80vw;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2vh;
+  margin-bottom: 5vh;
+
+  .betyg {
+    font-family: $heading-font;
+    display: flex;
+    width: 18rem;
+    height: 8rem;
+    flex-direction: column-reverse;
+  }
+  .bröd {
+    font-family: $body-font;
+  }
+  .formulärTitel{
+    display: flex;
+    justify-content: center;
+    font-family: $heading-font;
+  }
+  .formulärInput{
+    display: flex;
+    flex-direction: column;
+    font-family: $body-font;
+  }
+  .namnInput{
+    border-radius: 5px;
+    height: 3vh;
+    width: 70vw;
+    font-family: $body-font;
+  }
+  .textInput{
+    height: 20px;
+    border-radius: 5px;
+    height: 19vh;
+    width: 70vw;
+    font-family: $body-font;
+  }
+  .checkbox{
+    display: flex;
+    width: 30vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: flex-start;
+    margin-left: 5vw;
+  }
+  .button{ /* submitknapp */
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    width: 60vw;
+    font-size: large;
+    box-shadow: $background-shadow;
+    background: $button;
+    font-family: $heading-font;
+
+    button:hover, a:hover {
+      background: $button-hover;
+    }
+  }
+  
+
+}
+
+
+/****** Style Star Rating *****/
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 5vh;
+}
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 5px; /* mellanrum mellan stjärnorna */
+  font-size: 1.5em; /* Storlek på stjärnorna */
+  font-family: FontAwesome; /* Måste vara kvar */
+  display: inline-block; 
+  content: "\f005"; 
+}
+.rating > label {
+  color: #ddd; 
+  float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+} /* hover förgående stjärna */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+/****** Style Star Rating *****//*# sourceMappingURL=style.css.map */
+
+/* Media Q */ 
+
+@media screen and (min-width: 400px){
+  body {
+    background: white;
+  }
+  .article1{ /* Vit artikel - recensioner text */ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;   
+    margin-top: 5vh; 
+    width: 60%;
+    align-self: center;
+  
+  .bröd{ /* vit artikel - placering brödtext */
+    text-align: center;
+    width: 60%;
+    font-family: $body-font;
+  } 
+}
+
+.article2 { /* grön artikel - recensioner text */
+  background-color:$background-header ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+
+  .bröd{ /* grön artikel - placering brödtext */
+    text-align: center;
+    width: 40%;
+    font-family: $body-font;
+  }
+
+}
+
+.formulär1 { /* formulär */
+  box-shadow: $background-shadow;
+  display: flex;
+  height: 500px; /* Kontrollera höjden senare */ 
+  width: 75%;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2vh;
+  margin-bottom: 5vh;
+
+
+  .bröd {
+    font-family: $body-font;
+  }
+  .formulärTitel{
+    display: flex;
+    justify-content: center;
+    font-family: $heading-font;
+  }
+
+  .HeadingTextForm {  /* formulär titlar  */ 
+    display: flex;
+  }
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 25px;
+    font-size: xx-large;
+  }
+  .betyg {
+    font-family: "DM Mono", monospace;
+    display: flex;
+    width: 15rem;
+    height: 3rem;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+  }
+  .formulärInput{
+    display: flex;
+    flex-direction: column;
+    font-family: $body-font;
+  }
+  .namnInput{
+    border-radius: 5px;
+    height: 5vh;
+    width: 16rem;
+    font-family: $body-font;
+    align-self: center;
+    display: flex;
+  }
+  .textInput{
+    display: flex;
+    align-self: center;
+    height: 20px;
+    border-radius: 5px;
+    height: 19vh;
+    width: 16rem;
+    font-family: $body-font;
+  }
+  .checkbox{
+    display: flex;
+    width: 100px;
+    align-self: center;
+    margin-right: 175px;
+    justify-content: center;
+  }
+  .button{ /* submitknapp */
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    width: 240px;
+    font-size: large;
+    box-shadow: $background-shadow;
+    background: $button;
+    font-family: $heading-font;
+
+    button:hover, a:hover {
+      background: $button-hover;
+    }
+  }
+}
+
+}
