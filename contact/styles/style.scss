@@ -222,7 +222,7 @@ main {
     @include flex(column, space-around, center);
     margin: 3%;
 
-    @media (min-width: 1440px){
+    @media (min-width: 769px){
       width: 75vw;
       
     }
@@ -236,7 +236,7 @@ main {
       // @include body-font-lineheight;
       font-weight: bold;
 
-      @media (min-width: 1440px){
+      @media (min-width: 769px){
         width: 75vw;
       }
       h1{
@@ -251,7 +251,7 @@ main {
         color: black;
       }
 
-      @media (min-width: 1440px){
+      @media (min-width: 769px){
          .kontakta{
           height: 10%;
           
@@ -301,7 +301,7 @@ main {
       
       }
       
-      @media (min-width: 1440px){
+      @media (min-width: 769px){
         .map{
           #street-view{
           height: 500px;
@@ -323,7 +323,7 @@ main {
       box-shadow: $box-shadow;
       border-radius: $border-radius;
 
-      @media (min-width: 1440px){
+      @media (min-width: 769px){
         margin-top: 2%;
         
       }
@@ -333,7 +333,7 @@ main {
         width: 83%;
 
         // DESKOP VERSION
-        @media (min-width: 1440px){
+        @media (min-width: 769px){
           
           .form-heading{
             font-size: 1.6em;
@@ -392,7 +392,7 @@ main {
 
 
           margin-top: 10%;
-          @media (min-width: 1440px){
+          @media (min-width:769px){
             margin-top: 1%;
 
           }
@@ -409,7 +409,7 @@ main {
          font-weight: bold;
          margin: 6%;
          
-         @media (min-width: 1440px){
+         @media (min-width:769px){
          margin: 2%;
         }
       }
@@ -453,7 +453,7 @@ main {
         font-weight: bold;
         
 
-        @media (min-width: 1440px){
+        @media (min-width: 769px){
           font-size: 26px;
 
         }
@@ -477,7 +477,7 @@ main {
 
       // STYLE för checkbox och skicka-knapp
 
-      @media (min-width: 1440px){ 
+      @media (min-width: 769px){ 
         .media3{
           @include flex(row, center, center);
           margin-bottom: 10%;
@@ -503,6 +503,7 @@ main {
         text-align: center;
         background-color: $primary-orange;
         width: 100%;
+        box-shadow: $box-shadow;
         border-radius: $border-radius;
         height: 6vh;
         color: black;
@@ -512,7 +513,7 @@ main {
         &:before{
         background-color: red};
 
-        @media (min-width: 1440px){
+        @media (min-width: 769px){
           margin: 10%;
           height: 83px;
           // width: 75%;
