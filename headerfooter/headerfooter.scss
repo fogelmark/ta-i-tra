@@ -219,7 +219,7 @@
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
   
-    @include for-desktop {
+    @include for-desktop-nav {
       display: none;
     }
   }

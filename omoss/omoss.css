@@ -87,7 +87,9 @@
   /* två mindre bilder */
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  -moz-column-gap: 1.2em;
+       column-gap: 1.2em;
   row-gap: 1em;
 }
 .wrapPictureWeb .pictureArticle .bildS {
@@ -242,7 +244,7 @@
   }
   .wrapPictureWeb .pictureArticle .bildM {
     height: 20em;
-    width: 40em;
+    width: 41.3em;
   }
   .workbody {
     /* medarbetarkortkropp */
