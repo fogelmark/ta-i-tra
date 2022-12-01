@@ -163,7 +163,7 @@ main {
 }
 
 .masthead {
-  height: 30vh;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -173,9 +173,9 @@ main {
 
   @include for-desktop {
     @include flex(column, center, center);
-    height: 100vh;
+    height: 40rem;
     .masthead-text {
-      height: 40vh;
+      height: 20rem;
       margin-top: 10rem;
       h1 {
         font-size: 66px;
@@ -292,8 +292,8 @@ main {
   @include flex(row, space-around, center);
   justify-content: space-around;
   flex-flow: row wrap;
-  width: 80vw;
-  height: 40vh;
+  width: 80%;
+  height: 20rem;
   a {
     @include link-styling();
     color: black;
@@ -348,7 +348,7 @@ main {
 
 .recensioner {
   @include flex(column, flex-start, center);
-  width: 84vw;
+  width: 20.5rem;
   height: 57vh;
   box-shadow: $box-shadow;
 
