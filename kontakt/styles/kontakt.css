@@ -1,0 +1,291 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3%;
+}
+@media (min-width: 769px) {
+  .main-container {
+    width: 75vw;
+  }
+}
+.main-container .top-content {
+  width: 85vw;
+  text-align: center;
+  margin-top: 2rem;
+}
+@media (min-width: 769px) {
+  .main-container .top-content {
+    width: 75vw;
+  }
+}
+.main-container .top-content h1 {
+  font-family: "DM Mono", monospace;
+  font-size: 1.6em;
+  margin-bottom: 5%;
+}
+.main-container .top-content p {
+  margin: 4%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2 em;
+  font-weight: 700;
+}
+.main-container .top-content i {
+  margin: 4%;
+  font-size: 1.2 em;
+  font-weight: 700;
+}
+.main-container .contact-info {
+  text-decoration: none;
+  color: black;
+}
+@media (min-width: 769px) {
+  .main-container .kontakta {
+    height: 10%;
+  }
+  .main-container h1 {
+    font-size: 1.6em;
+  }
+  .main-container .media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .main-container .media .phone, .main-container .media .mail, .main-container .media .location {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-between;
+    width: 20%;
+    height: 20%;
+    font-size: 1.2rem;
+  }
+  .main-container .media #phone, .main-container .media #mail, .main-container .media #location {
+    font-size: 2.3rem;
+    cursor: pointer;
+    margin-bottom: 10%;
+    padding: 5%;
+  }
+}
+
+.mid-content {
+  width: 85vw;
+}
+.mid-content #street-view {
+  height: 25vh;
+  width: 100%;
+  border-radius: 0.3rem;
+  border: none;
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+@media (min-width: 769px) {
+  .mid-content {
+    width: 85%;
+  }
+  .mid-content .map #street-view {
+    height: 500px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.bot-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  font-family: "DM Sans", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  border-radius: 0.3rem;
+}
+@media (min-width: 769px) {
+  .bot-content {
+    width: 85%;
+    margin-top: 7%;
+  }
+}
+.bot-content form {
+  width: 83%;
+}
+@media (min-width: 769px) {
+  .bot-content form .form-heading {
+    font-weight: 700;
+  }
+  .bot-content form .buy {
+    margin-top: 3%;
+  }
+  .bot-content form #buy, .bot-content form #ask, .bot-content form #thoughts {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .bot-content form .media2 {
+    margin-top: 7%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: space-between;
+    -moz-column-gap: 4%;
+         column-gap: 4%;
+    margin-top: 10%;
+  }
+  .bot-content form .media2 .left-input, .bot-content form .media2 .right-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+  }
+  .bot-content form .media2 .left-input .right-input, .bot-content form .media2 .right-input .right-input {
+    padding-left: 25px;
+  }
+}
+@media (min-width: 769px) and (min-width: 769px) {
+  .bot-content form .media2 .left-input, .bot-content form .media2 .right-input {
+    margin-bottom: 2%;
+  }
+}
+@media (min-width: 769px) {
+  .bot-content form .media2 .user-name, .bot-content form .media2 .user-email {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  .bot-content form .media2 #user-name, .bot-content form .media2 #user-email, .bot-content form .media2 .free-text-input {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2 em;
+  }
+}
+.bot-content form .media2 {
+  margin-top: 10%;
+}
+@media (min-width: 769px) {
+  .bot-content form .media2 {
+    margin-top: 1%;
+  }
+}
+.bot-content #user-name, .bot-content #user-email, .bot-content .free-text-input {
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+}
+.bot-content .form-heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2 em;
+  line-height: 1.4em;
+  text-align: center;
+  font-weight: 700;
+  margin: 6%;
+}
+@media (min-width: 769px) {
+  .bot-content .form-heading {
+    margin: 2%;
+  }
+}
+.bot-content .buy, .bot-content .ask, .bot-content .thoughts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bot-content #buy, .bot-content #ask, .bot-content #thoughts {
+  height: 24px;
+  width: 24px;
+  margin: 1.5%;
+}
+.bot-content label[for=buy], .bot-content [for=ask], .bot-content [for=thoughts] {
+  margin-left: 10px;
+}
+.bot-content #user-name, .bot-content #user-email, .bot-content #free-text-input {
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 0.3rem;
+  margin: 3% 0 5% 0;
+}
+.bot-content #user-name, .bot-content #user-email {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  height: 46px;
+  width: 100%;
+}
+.bot-content #free-text-input {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  height: 205px;
+  width: 100%;
+  margin-bottom: 0;
+}
+.bot-content #text-area-label, .bot-content #user-name-label, .bot-content #user-email-label {
+  font-weight: 700;
+}
+.bot-content .terms {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 4% 0 5% 0;
+}
+.bot-content #terms {
+  height: 25px;
+  width: 25px;
+}
+.bot-content label[for=terms] {
+  margin-left: 10px;
+}
+@media (min-width: 769px) {
+  .bot-content .media3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+  .bot-content .terms {
+    width: 100%;
+  }
+  .bot-content #terms {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .bot-content .btn {
+    width: 100%;
+  }
+}
+.bot-content button {
+  font-size: 1.2rem;
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  background-color: #D99E47;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  border-radius: 0.3rem;
+  height: 6vh;
+  color: black;
+  font-weight: 700;
+  border: none;
+  margin: 5% 0 40% 0;
+}
+@media (min-width: 769px) {
+  .bot-content button {
+    margin: 10%;
+    height: 50px;
+    font-size: "DM Sans", sans-serif;
+    width: 90%;
+  }
+}
+.bot-content button:hover {
+  background-color: #955900;
+  color: white;
+}/*# sourceMappingURL=kontakt.css.map */

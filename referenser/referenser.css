@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------------------------------ */
+.HeadingText {
+  font-family: "DM Mono", monospace;
+  font-size: 1.6em;
+}
+
+.headerstyle {
+  background: #b9d09d;
+  height: 10vh;
+}
+
+.footerstyle {
+  background: #67893c;
+  height: 13vh;
+  position: relative;
+  bottom: 0;
+}
+
+.bröd,
+.tjock {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.tjock {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+body {
+  background: white;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.main .HeadingText {
+  margin-bottom: 2rem;
+}
+
+.article1 {
+  /* Vit artikel - recensioner text */
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 8rem;
+  padding: 2.5rem 2.5rem 0 2.5rem;
+}
+.article1 .bröd {
+  /* vit artikel - placering brödtext */
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin-bottom: 2rem;
+}
+.article1 a {
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-size: 19.2px;
+  font-weight: 700;
+}
+
+.article2 {
+  /* grön artikel - recensioner text */
+  background-color: #b9d09d;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+  margin-bottom: 2rem;
+}
+.article2 .bröd {
+  /* grön artikel - placering brödtext */
+  text-align: center;
+  width: 93%;
+}
+.article2 .divinstar {
+  /* grön artikel - stjärnor */
+  font-family: FontAwesome;
+  font-size: xx-large;
+  display: flex;
+  display: inline;
+  color: #d99e47;
+}
+.article2 .fa-regular {
+  color: #fff;
+}
+
+.divinstar {
+  /* grön artikel - stjärnor */
+  font-family: FontAwesome;
+  font-size: xx-large;
+  display: flex;
+  display: inline;
+  color: #d99e47;
+}
+
+.formulär1 {
+  /* formulär */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+  height: 75vh;
+  margin-bottom: 4rem;
+}
+.formulär1 .divinstar {
+  color: black;
+}
+.formulär1 .formulärInput .tjock {
+  align-self: flex-start;
+}
+.formulär1 #input-text {
+  height: 2.5rem;
+}
+.formulär1 input[type=text] {
+  padding: 0.5rem;
+  width: 17rem;
+  padding-left: 0.5rem;
+}
+.formulär1 textarea {
+  width: 17rem;
+  resize: none;
+  padding: 0.5rem;
+}
+.formulär1 .checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: flex-start;
+  margin-left: 0.5rem;
+}
+.formulär1 .checkbox input[type=checkbox] {
+  align-self: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+.formulär1 .button {
+  /* submitknapp */
+  border-radius: 0.3rem;
+  padding: 1rem 6.4rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  background: #d99e47;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+.formulär1 .button button:hover,
+.formulär1 .button a:hover {
+  background: #c27a0f;
+}
+
+/* Media Q */
+@media screen and (min-width: 400px) {
+  body {
+    background: white;
+  }
+  .article1 {
+    /* Vit artikel - recensioner text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+    margin-top: 5vh;
+    width: 60%;
+    align-self: center;
+  }
+  .article1 .bröd {
+    /* vit artikel - placering brödtext */
+    text-align: center;
+    width: 60%;
+    font-family: "DM Sans", sans-serif;
+  }
+  .article2 {
+    /* grön artikel - recensioner text */
+    background-color: #b9d09d;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 250px;
+  }
+  .article2 .bröd {
+    /* grön artikel - placering brödtext */
+    text-align: center;
+    width: 40%;
+    font-family: "DM Sans", sans-serif;
+  }
+  .formulär1 {
+    height: 45rem;
+    width: 35rem;
+  }
+  .formulär1 input[type=text], .formulär1 textarea {
+    width: 30rem;
+  }
+  .formulär1 .button {
+    cursor: pointer;
+    padding: 1rem 13rem;
+  }
+  .formulär1 .button:hover {
+    background: #c27a0f;
+    color: #fff;
+  }
+}/*# sourceMappingURL=referenser.css.map */

@@ -1,0 +1,318 @@
+// COLORS
+$primary-green: #67893c;
+$secondary-green: #b9cf9d;
+$btnhover-dark-green: #3d640c;
+$primary-orange: #d99e47;
+$btnhover-dark-orange: #955900;
+$input-border-grey: #c1c1c1;
+
+// FONTS
+$heading-font: "DM Mono", monospace;
+$body-font: "DM Sans", sans-serif;
+
+// FONT SIZES
+$heading-font-size: 1.6em;
+$body-font-size: 1.2em;
+$small-font-size: 1em;
+$icon-font-size: 2em;
+
+// LINE HEIGHTS
+$body-font-lineheight: 1.4em;
+
+// BORDER RADIUS
+$border-radius: 0.3rem;
+
+// BOX SHADOW
+$box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+
+// INPUT BORDER
+$input-border: 0.15rem solid $input-border-grey;
+
+@mixin heading-styling {
+  font-family: $heading-font;
+  font-size: $heading-font-size;
+}
+
+@mixin body-text-styling {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-font-lineheight;
+}
+
+@mixin small-text-styling {
+  font-family: $body-font;
+  font-size: $small-font-size;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin for-tablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-nav {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+$background-footer: #67893c;
+$background-header: #b9d09d;
+$header-vh: 10vh;
+$footer-vh: 13vh;
+$background-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+$button-hover: #c27a0f;
+$button: #d99e47;
+$greenbutton: #67893c;
+$greenbutton-hover: #3d640c;
+$heading-font: "DM Mono", monospace;
+$body-font: "DM Sans", sans-serif;
+
+@mixin margin($margin) {
+  margin: $margin;
+}
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+.HeadingText {
+  @include heading-styling();
+}
+
+.headerstyle {
+  background: $background-header;
+  height: $header-vh;
+}
+.footerstyle {
+  background: $background-footer;
+  height: $footer-vh;
+  position: relative;
+  bottom: 0;
+}
+
+.bröd,
+.tjock {
+  @include body-text-styling();
+}
+.tjock {
+  @include body-text-styling();
+  font-weight: 700;
+}
+
+body {
+  background: white;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  .HeadingText {
+    margin-bottom: 2rem;
+  }
+}
+
+.article1 {
+  /* Vit artikel - recensioner text */
+  // display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  // justify-content: space-evenly;
+  min-height: 8rem;
+  // margin-top: 5vh;
+  padding: 2.5rem 2.5rem 0 2.5rem;
+
+  .bröd {
+    /* vit artikel - placering brödtext */
+    text-align: center;
+    // width: 80vw;
+    @include body-text-styling();
+    margin-bottom: 2rem;
+  }
+
+  a {
+    color: black;
+    @include body-text-styling();
+    font-size: 19.2px;
+    font-weight: 700;
+  }
+}
+
+.article2 {
+  /* grön artikel - recensioner text */
+  background-color: $background-header;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+  margin-bottom: 2rem;
+
+  .bröd {
+    /* grön artikel - placering brödtext */
+    text-align: center;
+    width: 93%;
+  }
+
+  .divinstar {
+    /* grön artikel - stjärnor */
+    font-family: FontAwesome;
+    font-size: xx-large;
+    display: flex;
+    display: inline;
+    color: $button;
+  }
+
+  .fa-regular {
+    color: #fff;
+  }
+}
+
+.divinstar {
+  /* grön artikel - stjärnor */
+  font-family: FontAwesome;
+  font-size: xx-large;
+  display: flex;
+  display: inline;
+  color: $button;
+}
+
+.formulär1 {
+  /* formulär */
+  box-shadow: $background-shadow;
+  display: flex;
+  // height: 50vh;
+  // width: 80vw;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  // padding-bottom: 2vh;
+  // margin-bottom: 5vh;
+  padding: 2rem;
+  height: 75vh;
+  margin-bottom: 4rem;
+  .divinstar {
+    color: black;
+  }
+  .formulärInput {
+    .tjock {
+      align-self: flex-start;
+    } 
+  }
+  #input-text {
+    height: 2.5rem;
+  }
+  input[type="text"] {
+    padding: .5rem;
+    width: 17rem;
+    padding-left: .5rem;
+  }
+  textarea {
+    width: 17rem;
+    resize: none;
+    padding: .5rem;
+  }
+  .checkbox {
+    display: flex;
+    // width: 30vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: flex-start;
+    margin-left: .5rem;
+    input[type="checkbox"] {
+      align-self: center;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: .5rem;
+    }
+  }
+  .button {
+    /* submitknapp */
+    border-radius: $border-radius;
+    padding: 1rem 6.4rem;
+    border: none;
+    box-shadow: $background-shadow;
+    background: $button;
+    @include body-text-styling();
+    font-weight: 700;
+
+    button:hover,
+    a:hover {
+      background: $button-hover;
+    }
+  }
+}
+
+/* Media Q */
+
+@media screen and (min-width: 400px) {
+  body {
+    background: white;
+  }
+  .article1 {
+    /* Vit artikel - recensioner text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+    margin-top: 5vh;
+    width: 60%;
+    align-self: center;
+
+    .bröd {
+      /* vit artikel - placering brödtext */
+      text-align: center;
+      width: 60%;
+      font-family: $body-font;
+    }
+  }
+
+  .article2 {
+    /* grön artikel - recensioner text */
+    background-color: $background-header;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 250px;
+
+    .bröd {
+      /* grön artikel - placering brödtext */
+      text-align: center;
+      width: 40%;
+      font-family: $body-font;
+    }
+  }
+
+  .formulär1 {
+    height: 45rem;
+    width: 35rem;
+    input[type="text"], textarea {
+      width: 30rem;
+    }
+    .button {
+      cursor: pointer;
+      padding: 1rem 13rem;
+    }
+    .button:hover {
+      background: $button-hover;
+      color: #fff;
+    }
+  }
+}

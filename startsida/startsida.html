@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="stylesheet" href="/headerfooter/headerfooter.css" />
+    <link rel="stylesheet" href="startsida.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5ffbb1b7d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Ta i Trä - Startsida</title>
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div>
+          <img
+            src="/images/logo-horizontal.png"
+            class="logo-horizontal"
+            alt="company logo"
+          />
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <div class="menu-button">
+          <label class="menu-button-container" for="menu-toggle"></label>
+        </div>
+        <ul class="menu">
+          <li>
+            <a class="nav-link nav-active" href="/startsida/startsida.html"
+              >HEM</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="/produkter/produkter.html">PRODUKTER</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/referenser/referenser.html"
+              >REFERENSER</a
+            >
+          </li>
+          <li><a class="nav-link" href="/omoss/omoss.html">OM OSS</a></li>
+          <li><a class="nav-link" href="/kontakt/kontakt.html">KONTAKT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="masthead">
+        <div class="masthead-text">
+          <h1 class="heading-style">Shoppa träbestick</h1>
+          <h2 class="heading-style">Av skogen, för skogen.</h2>
+          <a href="/produkter/produkter.html" class="button">PRODUKTER</a>
+        </div>
+      </div>
+      <i
+        class="fa-solid fa-arrow-up"
+        onclick="topFunction()"
+        id="arrow"
+        title="Go to Top"
+      ></i>
+      <article class="article-slogan">
+        <h2 class="heading-style">Av skogen, för skogen.</h2>
+        <p class="body-regular">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </article>
+      <article class="article-products">
+        <h2 class="heading-style">Produktkategorier</h2>
+        <div class="product-container">
+          <a href="/produkter/produkter.html#forks">
+            <div class="product">
+              <img
+                class="cutlery gafflar"
+                src="/images/fork-orange-600.jpg"
+                alt="produktbild på en gaffel"
+              />
+              <p class="body-bold">Gafflar</p>
+            </div>
+          </a>
+          <a href="/produkter/produkter.html#knives">
+            <div class="product">
+              <img
+                class="cutlery knivar"
+                src="/images/knife-orange-600.jpg"
+                alt="produktbild på en kniv"
+              />
+              <p class="body-bold">Knivar</p>
+            </div>
+          </a>
+          <a href="/produkter/produkter.html#spoons">
+            <div class="product">
+              <img
+                class="cutlery skedar"
+                src="/images/spoon-orange-600.jpg"
+                alt="produktbild på en sked"
+              />
+              <p class="body-bold">Skedar</p>
+            </div>
+          </a>
+          <a href="/produkter/produkter.html#plates">
+            <div class="product">
+              <img
+                class="cutlery tallrikar"
+                src="/images/plate-orange-600.jpg"
+                alt="produktbild på en tallrik"
+              />
+              <p class="body-bold">Tallrikar</p>
+            </div>
+          </a>
+        </div>
+      </article>
+      <div class="info-boxes">
+        <section class="recension-container">
+          <h2 class="heading-style">Detta säger våra kunder om oss</h2>
+          <article class="recensioner">
+            <div class="rec-card">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="body-regular">"Lorem ipsum dolor sit amet..."</p>
+              <p class="body-bold">Mange</p>
+            </div>
+            <div class="rec-card">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="body-regular">"Lorem ipsum dolor sit amet..."</p>
+              <p class="body-bold">Debussy</p>
+            </div>
+            <p class="body-regular readmore">
+              Läs mer och skriv din egen recension!
+            </p>
+            <a class="button" href="/referenser/referenser.html">LÄS MER</a>
+          </article>
+        </section>
+        <section class="contact-container">
+          <h2 class="heading-style">Kontakta oss</h2>
+          <article class="contact">
+            <p class="body-regular questions">
+              Har du frågor eller synpunkter? Hör av dig för fan
+            </p>
+            <div class="contact-icons">
+              <div class="phone-contact">
+                <i class="fa-solid fa-phone 2x"></i>
+                <p class="body-bold">010-123 12 23</p>
+              </div>
+              <div class="mail-contact">
+                <i class="fa-solid fa-envelope 2x"></i>
+                <p class="body-bold">info@taitra.se</p>
+              </div>
+            </div>
+            <p class="body-regular">
+              Eller fyll i vårt supersnygga <a href="/kontakt/kontakt.html#help">formulär</span>
+            </p>
+          </article>
+        </section>
+      </div>
+      <section class="socials">
+        <h2 class="heading-style">Hitta oss på sociala medier!</h2>
+        <div class="socials-icons">
+          <div class="insta-acc">
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+              target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <p class="body-regular">TheRealTiT</p>
+          </div>
+          <div class="tiktok-acc">
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+              target="_blank"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <p class="body-regular">taiträ_official</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-logo">
+        <img src="/images/logo-icon.png" class="logo" alt="business logo" />
+      </div>
+      <ul class="footer-nav">
+        <li><a href="/startsida/startsida.html">Hem</a></li>
+        <li><a href="/produkter/produkter.html">Produkter</a></li>
+        <li><a href="/referenser/referenser.html">Referenser</a></li>
+        <li><a href="/omoss/omoss.html">Om oss</a></li>
+        <li><a href="/kontakt/kontakt.html">Kontakt</a></li>
+      </ul>
+      <div class="insta-acc">
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+          target="_blank"
+          ><i class="fa-brands fa-tiktok"></i
+        ></a>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Ta i Trä</p>
+      </div>
+    </footer>
+    <script src="/headerfooter/main.js"></script>
+  </body>
+</html>

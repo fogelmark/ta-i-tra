@@ -1,0 +1,420 @@
+// COLORS
+$primary-green: #67893C;
+$secondary-green: #B9CF9D;
+$btnhover-dark-green: #3D640C;
+$primary-orange: #D99E47; 
+$btnhover-dark-orange: #955900; 
+$input-border-grey: #c1c1c1;
+
+// FONTS
+$heading-font: 'DM Mono', monospace;
+$body-font: 'DM Sans', sans-serif;
+
+// FONT SIZES
+$heading-font-size: 1.6em;
+$body-font-size: 1.2 em;
+$small-font-size: 1em;
+$icon-font-size: 2em;
+
+// LINE HEIGHTS
+$body-font-lineheight: 1.4em;
+
+// BORDER RADIUS
+$border-radius: .3rem;
+
+// BOX SHADOW
+$box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+
+// INPUT BORDER
+$input-border: .15rem solid $input-border-grey;
+
+
+@mixin heading-styling {
+  font-family: $heading-font;
+  font-size: $heading-font-size;
+}
+
+@mixin body-text-styling {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-font-lineheight;
+}
+
+@mixin small-text-styling {
+  font-family: $body-font;
+  font-size: $small-font-size;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin radio-button-size($height, $width) {
+  height: $height;
+  width: $width;
+  
+}
+
+@mixin for-tablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+  @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-nav {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+// MIN KOD
+
+main {
+ @include flex(column, space-around, center);
+}
+
+.main-container {
+    min-height: 100vh;
+    @include flex(column, space-around, center);
+    margin: 3%;
+
+    @media (min-width: 769px){
+      width: 75vw;
+      
+    }
+
+// TOP SECTION //
+
+    .top-content{
+      
+      width: 85vw;
+      text-align: center;
+      margin-top: 2rem;
+
+      @media (min-width: 769px){
+        width: 75vw;
+      }
+
+      h1{
+        font-family: $heading-font;
+        font-size: $heading-font-size;
+        margin-bottom: 5%;
+      }
+      p {
+        margin: 4%;
+        font-family: $body-font;
+        font-size: $body-font-size;
+        font-weight: 700;
+      }
+      i {margin: 4%;
+      // font-family: $body-font;
+      font-size: $body-font-size;
+      font-weight: 700;
+      }
+    }
+      .contact-info{
+        text-decoration: none;
+        color: black;
+      }
+
+   
+      @media (min-width: 769px){
+         .kontakta{
+          height: 10%;
+        }
+          h1{
+            font-size: $heading-font-size;
+        }
+         
+        .media{
+           @include flex(row, space-around, start);
+          
+          .phone, .mail, .location{
+            @include flex(column, space-evenly, space-between);
+            width: 20%;
+            height: 20%;
+            font-size: 1.2rem;
+            
+
+          }
+          #phone, #mail, #location{
+            font-size: 2.3rem;
+            cursor: pointer;
+            margin-bottom: 10%;
+            padding: 5%;
+            
+            
+         }
+        }
+        }
+      }
+
+// MIDDLE SECTION //
+    .mid-content{
+      width: 85vw;
+      
+
+      #street-view{
+      height: 25vh;
+      width: 100%;
+      border-radius: $border-radius;
+      border: none;
+      margin-top: 10%;
+      margin-bottom: 8%;
+      
+      }
+      
+      @media (min-width: 769px){
+        .map{
+          #street-view{
+          height: 500px;
+          margin-top: 0;
+          margin-bottom: 0;
+          
+        }
+      }
+      width: 85%;
+      }
+    }
+
+// BOTTOM SECTION //
+
+
+    .bot-content{
+      @include flex(column, center, center);
+      width: 85vw;
+      font-family: $body-font;
+      box-shadow: $box-shadow;
+      border-radius: $border-radius;
+
+      @media (min-width: 769px){
+        width: 85%;
+        margin-top: 7%;
+      }
+      
+      // FORMULÄRET // 
+      form{
+        width: 83%;
+
+        // DESKOP VERSION
+        @media (min-width: 769px){
+          
+          .form-heading{
+            font-weight: 700;
+          
+          }
+          
+          // Radiobuttons
+          .buy{
+            margin-top: 3%;
+          }
+          
+          #buy, #ask, #thoughts{
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+
+          // // Etiketter för radiobuttons
+          // label[for=buy], label[for=ask], label[for=thoughts]{
+          //   font-size: 1.6em;
+            
+          // }
+
+          // Förälder left och right input
+          
+          .media2{
+            margin-top: 7%;
+            padding-top: 5%;
+            @include flex(row, start, space-between);
+            column-gap: 4%;
+          
+
+           .left-input, .right-input{
+              @include flex(column, center, start);
+              
+              width: 100%;
+              
+              .right-input{
+                padding-left: 25px;
+              }
+
+              @include for-desktop {
+                margin-bottom: 2%;
+              }
+
+            }
+            .user-name, .user-email{
+              margin-top: 0;
+              width: 100%;
+            }
+
+           #user-name, #user-email, .free-text-input {
+
+            font-family: $body-font;
+        font-size: $body-font-size;
+        }
+
+          margin-top: 10%;
+          
+          }
+        }
+        // FORMULÄR DESKTOP ENDS HERE
+        
+        .media2{
+
+
+          margin-top: 10%;
+          @media (min-width:769px){
+            margin-top: 1%;
+
+          }
+          // background: red;
+          
+    }
+} 
+
+
+#user-name, #user-email, .free-text-input {
+  
+  box-sizing: border-box;
+  padding-left: .5rem;
+}
+      
+   // Rubrik formuläret // 
+      
+      .form-heading{
+        @include body-text-styling;
+         text-align: center;
+        font-weight: 700;
+         margin: 6%;
+         
+         @media (min-width:769px){
+         margin: 2%;
+        }
+      }
+
+     // Positionering buy, ask och thoughts
+
+      .buy, .ask, .thoughts{
+        @include flex(row, flex-start, center);
+      }
+
+      #buy, #ask, #thoughts{
+      @include radio-button-size(24px, 24px);
+       margin: 1.5%;
+      }
+
+      label[for=buy], [for=ask], [for=thoughts]{
+       margin-left: 10px;
+       }
+
+      #user-name, #user-email, #free-text-input{
+        
+        border: 1px solid rgb(193, 193, 193);
+        
+        border-radius: $border-radius;
+       margin: 3% 0 5% 0;
+      
+      }
+      #user-name, #user-email{
+        font-family: $body-font;
+        font-size: 1rem;
+        font-weight: normal;
+        height: 46px;
+        width: 100%;
+
+      }
+       #free-text-input{
+        font-family: $body-font;
+        font-size: 1rem;
+        // font-size: $body-font-size;
+        
+         height: 205px;
+         width: 100%;
+         margin-bottom: 0;
+
+       }
+     #text-area-label, #user-name-label, #user-email-label{
+        
+        font-weight: 700;
+      }
+
+
+      .terms{
+        @include flex(row, flex-start, center);
+        margin: 4% 0 5% 0;
+
+      }
+
+      #terms{
+       @include radio-button-size(25px, 25px);
+       }
+      
+      label[for=terms]{
+        margin-left: 10px;
+      }
+
+      // STYLE för checkbox och skicka-knapp
+
+      @media (min-width: 769px){ 
+        .media3{
+          @include flex(row, center, center);
+          margin-bottom: 10%;
+      }
+
+      .terms{
+        width: 100%;
+      }
+
+      #terms{
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
+      .btn{
+        width: 100%;
+      }
+
+    }
+
+    button{
+      // @include body-text-styling;
+        font-size: 1.2rem;
+        font-family: $body-font;
+        text-align: center;
+        background-color: $primary-orange;
+        width: 100%;
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+        height: 6vh;
+        color: black;
+        font-weight: 700;
+        border: none;
+        margin: 5% 0 40% 0;
+        
+
+        @media (min-width: 769px){
+          margin: 10%;
+          height: 50px;
+          // width: 75%;
+          font-size: $body-font;
+          width: 90%;
+        }
+        }
+    button:hover {
+      background-color: $btnhover-dark-orange;
+      color: white;
+    }
+}
+
+
+// min kod slutar här //

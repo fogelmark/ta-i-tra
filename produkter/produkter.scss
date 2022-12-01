@@ -28,6 +28,8 @@ $box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
 // INPUT BORDER
 $input-border: .15rem solid $input-border-grey;
 
+//-------------------------------------------------------
+// MIXINS
 
 @mixin heading-styling {
   font-family: $heading-font;
@@ -70,217 +72,9 @@ $input-border: .15rem solid $input-border-grey;
   }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+//------------------------------------------------------
 
-
-.top-nav {
-  @include flex(row, space-between, center);
-  background: $secondary-green;
-  color: #fff;  
-  padding: 1em;
-  height: 5rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
-  .logo-horizontal {
-    width: 10em;
-  }
-  #menu-toggle {
-    display: none;
-  }
-}
-
-.menu {
-  @include body-text-styling;
-  font-weight: 700;
-  @include flex(row, flex-start, center);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu > li {
-  margin: 0 1rem;
-  overflow: hidden;
-}
-
-.menu-button-container {
-  @include flex(column, center, center);
-  display: none;
-  height: 100%;
-  width: 30px;
-  cursor: pointer;
-}
-
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-  display: block;
-  background-color: #000;
-  position: absolute;
-  height: 4px;
-  width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
-}
-
-.menu-button::before {
-  content: "";
-  margin-top: -8px;
-}
-
-.menu-button::after {
-  content: "";
-  margin-top: 8px;
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
-}
-
-.nav-link {
-  @include body-text-styling;
-  outline: none;
-  text-decoration: none;
-  color: #fff;
-  font-family: $body-font;
-
-  @include for-desktop-nav {
-    color: black;
-    &:hover {
-      color: #fff;
-    }
-  }
-}
-@media (max-width: 900px) {
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 5rem;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 0.5px solid #fff;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    @include flex(row, center, flex-start);
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: $primary-green;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
-}
-
-footer {
-  @include flex(column, space-around, center);
-  background: $primary-green;
-  height: 10rem;
-  position: relative;
-  bottom: 0;
-  color: #fff;
-
-  .insta-acc {
-    @include flex(row, center, center);
-    font-size: 1em;
-    width: 5rem;
-    gap: 1rem;
-  }
-
-  .footer-nav {
-    @include small-text-styling;
-    font-weight: 700;
-    @include flex(row, space-around, flex-start);
-    width: 22.4375em;
-    list-style: none;
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-  }
-  .footer-logo {
-    @include flex(row, center, center);
-    .logo {
-      width: 3.5em;
-    }
-  }
-  .footer-copyright {
-    @include small-text-styling;
-    @include flex(row, space-around, flex-start);
-    font-size: 0.8em;
-    display: flex;
-    justify-content: space-around;
-    width: 50vw;
-  }
-}
-
-
-//-----------------------------------
-
-
-
-@mixin heading-styling {
-  font-family: $heading-font;
-  font-size: $heading-font-size;
-}
-
-@mixin body-text-styling {
-  font-family: $body-font;
-  font-size: $body-font-size;
-  line-height: $body-font-lineheight;
-}
-
-@mixin small-text-styling {
-  font-family: $body-font;
-  font-size: $small-font-size;
-}
-
-@mixin for-tablet {
-  @media (min-width: 481px) and (max-width: 768px) {
-  @content;
-}
-}
-
-@mixin for-desktop {
-  @media (min-width: 769px) {
-    @content;
-  }
-}
-
-// Text styling rules
+// Text styling classes
 
 .bold {
   font-weight: 700;
@@ -298,25 +92,8 @@ footer {
   @include body-text-styling;
 }
 
-.btn {
-  @include body-text-styling;
-  font-weight: 700;
-  border-radius: $border-radius;
-  border: none;
-}
-
-.input {
-  border-radius: $border-radius;
-  border: .15rem solid $input-border-grey;
-  outline: none;
-  font-size: $heading-font-size;
-}
-
-
 main {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
+  @include flex(column, flex-start, center);
 }
 
 .heading {
@@ -326,9 +103,7 @@ main {
 .cover {
   margin-top: 2rem;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(column, flex-start, center);
 }
 
 .cover-img {
@@ -388,23 +163,24 @@ main {
 .product {
   width: 90vw;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(column, space-between, center);
   box-shadow: $box-shadow;
   margin-top: 2rem;
   margin-bottom: 2rem;
 
+  @include for-tablet {
+    padding: 2rem;
+  }
+
   @include for-desktop {
     width: 45vw;
+    padding: 2rem;
   }
 }
 
 .space-between {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  @include flex(row, space-between, flex-start)
 }
 
 .product-img {
@@ -429,8 +205,7 @@ main {
 }
 
 .product-buy {
-  display: flex; 
-  justify-content: space-between;
+  @include flex(row, space-between, flex-start);
   margin-top: 1rem; 
   margin-bottom: 1rem; 
   width: 100%;
@@ -446,9 +221,7 @@ main {
 
 .price {
   width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  @include flex(column, flex-start, flex-end);
   margin-top: 1rem;
 }
 
@@ -456,6 +229,20 @@ main {
   padding: .5rem;
   padding-top: 1rem;
   text-align: right;
+}
+
+.input {
+  border-radius: $border-radius;
+  border: .15rem solid $input-border-grey;
+  outline: none;
+  font-size: $heading-font-size;
+}
+
+.btn {
+  @include body-text-styling;
+  font-weight: 700;
+  border-radius: $border-radius;
+  border: none;
 }
 
 .green {

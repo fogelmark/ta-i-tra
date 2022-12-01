@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+/* ------------------------------------------------------------------------------------ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.HeadingText {
+  font-family: "DM Mono", monospace;
+  font-size: 1.6em;
+}
+
+.bröd {
+  display: flex;
+  text-align: center;
+  align-self: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.titel1 {
+  /* titel - om oss */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "DM Mono", monospace;
+  font-size: 1.6em;
+  padding: 1em;
+}
+
+.article1wrap {
+  /* grön artikel - historik  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 27rem;
+  background-color: #b9d09d;
+}
+.article1wrap .article1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70vw;
+  min-height: 23rem;
+}
+
+.article2 {
+  /* vit artikel - tillverkningsprocess */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* @include heading-styling(); */
+}
+.article2 .bröd2 {
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  align-self: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+.article2 .HeadingText {
+  margin-bottom: 1em;
+}
+
+.bröd,
+.bröd2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.wrapPictureWeb {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.wrapPictureWeb .pictureArticle {
+  /* två mindre bilder */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  row-gap: 1em;
+}
+.wrapPictureWeb .pictureArticle .bildS {
+  width: 10em;
+  height: 10em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.3rem;
+}
+.wrapPictureWeb .pictureArticle .bildM {
+  width: 21.5em;
+  height: 10em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.last {
+  margin-bottom: 4rem;
+}
+
+.workForceTitel {
+  /* titel - medarbetare */
+  padding: 2em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.workbody {
+  /* medarbetarkortkropp */
+  display: flex;
+  flex-direction: column;
+}
+.workbody .workForceMain {
+  /* medarbetarkortplacering */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+}
+.workbody .card {
+  /* medarbetarkort */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  text-align: center;
+  padding: 1em;
+  width: 70vw;
+}
+.workbody .cardImgStyle {
+  display: flex;
+  /* medarbetarkort - bild */
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 12em;
+  width: 12em;
+}
+.workbody .namn {
+  /* medarbetarkort - namn */
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-family: "DM Mono", monospace;
+}
+.workbody .titelorganizer {
+  /* medarbetarkort - kropp */
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  height: 14rem;
+  flex-direction: column;
+}
+.workbody .titelorganizer .title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+}
+.workbody .titelorganizer .title-body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1em;
+}
+.workbody button {
+  /* medarbetarkort - knapp */
+  border: none;
+  border-radius: 5%;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+  background: #d99e47;
+}
+.workbody button button:hover,
+.workbody button a:hover {
+  background: #c27a0f;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: white;
+  }
+  .bröd {
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+    font-size: large;
+    justify-content: center;
+  }
+  .titel1 {
+    /* titel - om oss */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: "DM Mono", monospace;
+    font-size: 1.6em;
+    height: 12vh;
+  }
+  .article1wrap {
+    /* grön artikel - historik  */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 15rem;
+    background-color: #b9d09d;
+  }
+  .article1wrap .article1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40vw;
+    height: 15rem;
+  }
+  .article2 {
+    /* vit artikel - tillverkningsprocess */
+    min-height: 15vh;
+  }
+  .article2 .bröd2 {
+    width: 40vw;
+  }
+  .wrapPictureWeb .pictureArticle {
+    width: 100%;
+  }
+  .wrapPictureWeb .pictureArticle .bildS {
+    height: 20em;
+    width: 20em;
+  }
+  .wrapPictureWeb .pictureArticle .bildM {
+    height: 20em;
+    width: 40em;
+  }
+  .workbody {
+    /* medarbetarkortkropp */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .workbody .workForceMain {
+    /* medarbetarkortplacering */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    row-gap: 5em;
+  }
+  .workbody .card {
+    /* medarbetarkort */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+    text-align: center;
+    width: 23rem;
+  }
+  .workbody .desktop {
+    margin-bottom: 3rem;
+  }
+}/*# sourceMappingURL=omoss.css.map */
