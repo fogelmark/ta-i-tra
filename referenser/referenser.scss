@@ -1,10 +1,3 @@
-// COLORS
-$primary-green: #67893c;
-$secondary-green: #b9cf9d;
-$btnhover-dark-green: #3d640c;
-$primary-orange: #d99e47;
-$btnhover-dark-orange: #955900;
-$input-border-grey: #c1c1c1;
 
 // FONTS
 $heading-font: "DM Mono", monospace;
@@ -51,26 +44,14 @@ $input-border: 0.15rem solid $input-border-grey;
   align-items: $align;
 }
 
-@mixin for-tablet {
-  @media (min-width: 481px) and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin for-desktop {
-  @media (min-width: 769px) {
-    @content;
-  }
-}
-
-@mixin for-desktop-nav {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-
 /* ------------------------------------------------------------------------------------ */
 
+$primary-green: #67893c;
+$secondary-green: #b9cf9d;
+$btnhover-dark-green: #3d640c;
+$primary-orange: #d99e47;
+$btnhover-dark-orange: #955900;
+$input-border-grey: #c1c1c1;
 $background-footer: #67893c;
 $background-header: #b9d09d;
 $header-vh: 10vh;
@@ -105,15 +86,13 @@ $body-font: "DM Sans", sans-serif;
   bottom: 0;
 }
 
-.bröd,
-.tjock {
+.bröd,.tjock {
   @include body-text-styling();
 }
 .tjock {
   @include body-text-styling();
   font-weight: 700;
 }
-
 body {
   background: white;
 }
@@ -125,26 +104,17 @@ body {
     margin-bottom: 2rem;
   }
 }
-
 .article1 {
-  /* Vit artikel - recensioner text */
-  // display: flex;
   text-align: center;
   align-items: center;
   flex-direction: column;
-  // justify-content: space-evenly;
   min-height: 8rem;
-  // margin-top: 5vh;
   padding: 2.5rem 2.5rem 0 2.5rem;
-
   .bröd {
-    /* vit artikel - placering brödtext */
     text-align: center;
-    // width: 80vw;
     @include body-text-styling();
     margin-bottom: 2rem;
   }
-
   a {
     color: black;
     @include body-text-styling();
@@ -152,9 +122,7 @@ body {
     font-weight: 700;
   }
 }
-
 .article2 {
-  /* grön artikel - recensioner text */
   background-color: $background-header;
   display: flex;
   align-items: center;
@@ -162,48 +130,35 @@ body {
   justify-content: space-evenly;
   height: 30vh;
   margin-bottom: 2rem;
-
   .bröd {
-    /* grön artikel - placering brödtext */
     text-align: center;
     width: 93%;
   }
-
   .divinstar {
-    /* grön artikel - stjärnor */
     font-family: FontAwesome;
     font-size: xx-large;
     display: flex;
     display: inline;
     color: $button;
   }
-
   .fa-regular {
     color: #fff;
   }
 }
-
 .divinstar {
-  /* grön artikel - stjärnor */
   font-family: FontAwesome;
   font-size: xx-large;
   display: flex;
   display: inline;
   color: $button;
 }
-
 .formulär1 {
-  /* formulär */
   box-shadow: $background-shadow;
   display: flex;
-  // height: 50vh;
-  // width: 80vw;
   align-items: center;
   align-self: center;
   flex-direction: column;
   justify-content: space-evenly;
-  // padding-bottom: 2vh;
-  // margin-bottom: 5vh;
   padding: 2rem;
   height: 75vh;
   margin-bottom: 4rem;
@@ -230,7 +185,6 @@ body {
   }
   .checkbox {
     display: flex;
-    // width: 30vw;
     flex-direction: row;
     justify-content: space-evenly;
     align-self: flex-start;
@@ -243,7 +197,6 @@ body {
     }
   }
   .button {
-    /* submitknapp */
     border-radius: $border-radius;
     padding: 1rem 6.4rem;
     border: none;
@@ -259,14 +212,11 @@ body {
   }
 }
 
-/* Media Q */
-
 @media screen and (min-width: 400px) {
   body {
     background: white;
   }
   .article1 {
-    /* Vit artikel - recensioner text */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -276,7 +226,6 @@ body {
     align-self: center;
 
     .bröd {
-      /* vit artikel - placering brödtext */
       text-align: center;
       width: 60%;
       font-family: $body-font;
@@ -284,7 +233,6 @@ body {
   }
 
   .article2 {
-    /* grön artikel - recensioner text */
     background-color: $background-header;
     display: flex;
     align-items: center;
@@ -293,7 +241,6 @@ body {
     height: 250px;
 
     .bröd {
-      /* grön artikel - placering brödtext */
       text-align: center;
       width: 40%;
       font-family: $body-font;
